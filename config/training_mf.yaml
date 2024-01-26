@@ -1,0 +1,44 @@
+#
+# MF
+#
+mf_embedding_size:
+# multiple hours compute time experienced in computing environment
+  - 50
+mf_regularization:
+  # mf_-> 0.2, mf_FF -> 0.0
+#  - 0.0
+  - 0.05
+#  - 0.10
+#  - 0.15
+#  - 0.20
+#  - 0.25
+#  - 0.30
+mf_max_iterations:
+  # 1000 iterations does not reach convergence
+  - 10000
+mf_train_split: 0.9
+mf_split_seed: 42
+mf_distance_measure: cosine
+mf_finetune_measure: similarity_variance
+# mf_finetune_measure: MSE
+mf_finetune_workers: 1
+
+
+#
+# mf_co-occurrence
+#
+mf_cooccurrence_embedding_size:
+  - 100
+mf_cooccurrence_regularization:
+  - 0.0
+mf_cooccurrence_max_iterations:
+  - 20
+mf_cooccurrence_train_split: 0.1
+mf_cooccurrence_split_seed: 42
+#mf_cooccurrence_distance_measure: euclidean
+mf_cooccurrence_distance_measure: cosine
+mf_cooccurrence_finetune_measure: similarity_variance
+#mf_cooccurrence_finetune_measure: MSE
+
+## set this to 1 to only include 1% of all people when running MF. This is for testing.
+test: 1
